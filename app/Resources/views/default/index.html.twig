@@ -62,13 +62,13 @@
                         <table id="results" class="table table-striped table-hover">
                             <tbody>
                                 <tr>
-                                    <td><img src="{{HAUTS}}"></td><td rowspan="2"><img src="{{MANTEAUX}}"></td>
+                                    <td><img src="images/{{HAUTS}}"></td><td rowspan="2"><img src="images/{{MANTEAUX}}"></td>
                                 </tr>
                                 <tr>
-                                    <td><img src="{{BAS}}"></td>
+                                    <td><img src="images/{{BAS}}"></td>
                                 </tr>
                                 <tr>
-                                    <td><img src="{{CHAUSSURES}}"></td> <td><img src="{{ACCESSOIRES}}"></td>
+                                    <td><img src="images/{{CHAUSSURES}}"></td> <td><img src="images/{{ACCESSOIRES}}"></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -82,6 +82,10 @@
 
 {% block stylesheets %}
     <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
         a {
             color:blue;
             margin-right: 10px;
