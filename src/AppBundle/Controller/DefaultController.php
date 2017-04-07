@@ -12,6 +12,6 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('default/index.html.twig', array("haut" => "","bas" =>"", "manteau" =>"", "chaussures" => "", "accessoire" => ""));
+        return $this->render('default/index.html.twig', array("hauts" => "","bas" =>"", "manteaux" =>"", "chaussures" => "", "accessoires" => ""));
     }
 }
