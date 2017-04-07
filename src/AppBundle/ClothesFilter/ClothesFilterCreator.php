@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\RandomLook;
+namespace AppBundle\ClothesFilter;
 
 use GraphAware\Neo4j\Client\Client;
 use GraphAware\Neo4j\Client\ClientBuilder;

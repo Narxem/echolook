@@ -13,10 +13,20 @@ use LookCoordinator;
 class LookCoordinatorShould extends \PHPUnit_Framework_TestCase
 {
 
+    protected $_lookCoordinator;
+
+    /**
+     * @before
+     */
+    public function before() {
+        $_lookCoordinator = new lookCoordinator();
+    }
+
     /**
      * @test
      */
-    public function returnAGoodLook(){
-        $this->fail("Not yet Implemented");
+    public function returnAGoodLookWithAtLeast3ClothesOfDifferentTypes(){
+
+        assert($this->_lookCoordinator->coordinateLook();
     }
 }

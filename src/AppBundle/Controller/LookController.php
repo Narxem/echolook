@@ -2,7 +2,7 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\RandomLook\ClothesFilterCreator;
+use AppBundle\ClothesFilter\ClothesFilterCreator;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
@@ -29,7 +29,6 @@ class LookController extends Controller
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function searchAction() {
-        var_dump($_POST['event-select']);
         return $this->render(
             'default/index.html.twig',
             $this->_clothesFilter->allClothesCorrespondingToCriteria($_POST['event'], $_POST['style'], $_POST['season']));
