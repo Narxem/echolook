@@ -10,3 +10,7 @@ homepage:
 randomLook:
     path: /random
     defaults: { _controller: AppBundle:RandomLook:index}
+
+lookSearch:
+    path: /search
+    defaults: { _controller: AppBundle:Look:search }
