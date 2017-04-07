@@ -23,14 +23,4 @@ class RandomLookController extends Controller
             $this->_randomLookCreator->findRandomClothes());
 
     }
-
-
-    /**
-     * @return \GraphAware\Neo4j\Client\Client
-     */
-    private function getNeo4jClient()
-    {
-        return $this->get('neo4j.client');
-    }
-
 }
