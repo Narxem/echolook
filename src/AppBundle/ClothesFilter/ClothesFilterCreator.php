@@ -66,6 +66,6 @@ class ClothesFilterCreator
             }
         }
 
-        return $this->lookCoordinator.coordinateLook($clothes);
+        return $this->lookCoordinator->coordinateLook($clothes);
     }
 }
