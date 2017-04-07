@@ -42,9 +42,9 @@ class ClothesFilterCreator
             $string = $event.$style;
             $string2 = $event.$season;
             $string3 = $season.$style;
-            $query = 'MATCH (n:Association {label:"'. $string.' "}) RETURN n';
-            $query2 = 'MATCH (n:Association {label:"'. $string2.' "}) RETURN n';
-            $query3 = 'MATCH (n:Association {label:"'. $string3.' "}) RETURN n';
+            $query = 'MATCH (asso:Association {label:"'.$string.'"}), (asso)-[:Match]->(:Tag)-[:Have]->(n:Image) RETURN n';
+            $query2 = 'MATCH (asso:Association {label:"'.$string2.'"}), (asso)-[:Match]->(:Tag)-[:Have]->(n:Image) RETURN n';
+            $query3 = 'MATCH (asso:Association {label:"'.$string3.'"}), (asso)-[:Match]->(:Tag)-[:Have]->(n:Image) RETURN n';
             $result = $this->_client->run($query);
             foreach ($result->records() as $record){
                 array_push($clothes, $record->get('n')->values());
@@ -59,7 +59,8 @@ class ClothesFilterCreator
             }
         } else {
             $string = $event.$style.$season;
-            $query = 'MATCH (n:Association {label:"'. $string.' "}) RETURN n';
+            var_dump($string);
+            $query = 'MATCH (asso:Association {label:"'.$string.'"}), (asso)-[:Match]->(:Tag)-[:Have]->(n:Image) RETURN n';
             $result = $this->_client->run($query);
             foreach ($result->records() as $record){
                 array_push($clothes, $record->get('n')->values());

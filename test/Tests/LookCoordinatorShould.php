@@ -8,7 +8,7 @@
 
 namespace Tests;
 
-use LookCoordinator;
+use AppBundle\LookCoordinator\LookCoordinator;
 
 class LookCoordinatorShould extends \PHPUnit_Framework_TestCase
 {
@@ -27,6 +27,6 @@ class LookCoordinatorShould extends \PHPUnit_Framework_TestCase
      */
     public function returnAGoodLookWithAtLeast3ClothesOfDifferentTypes(){
 
-        assert($this->_lookCoordinator->coordinateLook();
+        $look = $this->_lookCoordinator->coordinateLook();
     }
 }

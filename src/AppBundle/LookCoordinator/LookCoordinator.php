@@ -17,15 +17,21 @@ class LookCoordinator
      * @return a coherent look
      */
     public function coordinateLook($clothes) {
+        shuffle($clothes);
         $look = [
             "ACCESSOIRES" => '',
             "BAS" => '',
-            "HAUT" => '',
+            "HAUTS" => '',
             "CHAUSSURES" => '',
             "MANTEAUX" => ''
         ];
 
-        var_dump($clothes[0]);
+        foreach ($clothes as $cloth ) {
+            if ($look[$cloth['type']] == "") {
+                $look[$cloth['type']] = $cloth['path'];
+            }
+        }
+        return $look;
     }
 
 }
