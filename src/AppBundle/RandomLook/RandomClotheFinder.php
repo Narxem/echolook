@@ -13,6 +13,6 @@ class RandomClotheFinder
 {
 
     function findRandomClothe() {
-        $query = ""
+        $query = "";
     }
 }
