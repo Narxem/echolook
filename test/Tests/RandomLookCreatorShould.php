@@ -17,6 +17,6 @@ class RandomLookCreatorShould extends \PHPUnit_Framework_TestCase
      * @test
      */
     public function returnRandomLookWhenCalled() {
-        $this->fail("Not yet Implemented");
+        $this->fail("Will never be implemented");
     }
 }
