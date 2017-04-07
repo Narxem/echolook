@@ -1,0 +1,12 @@
+
+look_search:
+    path: /search
+    defaults: { _controller: AppBundle:Movie:search }
+
+homepage:
+    path: /
+    defaults: { _controller: AppBundle:Default:index }
+
+randomLook:
+    path: /random
+    defaults: { _controller: AppBundle:RandomLook:index}
