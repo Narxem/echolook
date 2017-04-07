@@ -10,7 +10,7 @@ class RandomLookController extends Controller
 
     public function indexAction()
     {
-        return $this->render('look/randomLook.html.twig');
+        return $this->render('default/index.html.twig', array("haut" => "","bas" =>"", "manteau" =>"", "chaussures" => "", "accessoire" => ""));
 
     }
 }
